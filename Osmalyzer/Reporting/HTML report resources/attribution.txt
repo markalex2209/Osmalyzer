@@ -4,6 +4,9 @@ https://commons.wikimedia.org/wiki/File:Eo_circle_green_white_checkmark.svg
 orangeCheckmark.png
 https://commons.wikimedia.org/wiki/File:Eo_circle_orange_white_checkmark.svg
 
+purpleCheckmark.png
+https://commons.wikimedia.org/wiki/File:Eo_circle_purple_checkmark.svg
+
 redCross.png
 https://commons.wikimedia.org/wiki/File:Antu_application-exit.svg
 
