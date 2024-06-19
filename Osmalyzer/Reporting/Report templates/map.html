@@ -56,9 +56,23 @@
     ];
 
     markerList_GI_.forEach(data => {
+        var popup = L.popup();
+        var container = L.DomUtil.create('div'); 
+        container.innerHTML = data[5];
+        if (data[4] === 'red') {
+            // Allow errors to be manually resolved
+            var btnWrapper = L.DomUtil.create('div', 'resolve-btn-container', container);
+            var resolveBtn = L.DomUtil.create('button', '', btnWrapper);
+            resolveBtn.setAttribute('type', 'button');
+            resolveBtn.innerHTML = 'Mark resolved';
+
+            L.DomEvent.on(resolveBtn, 'click', () => {
+                alert("toto");
+            });
+        }
         L.marker([data[0], data[1]], {icon: data[2]})
             .addTo(data[3])
-            .bindPopup(data[5], { maxWidth : 560 })
+            .bindPopup(popup, { maxWidth : 560 })
             .group=data[4];
     });
     
