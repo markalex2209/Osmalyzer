@@ -98,7 +98,46 @@ public static class EmbeddedIcons
             "orangeGreenCircle.png",
             20
         ),
+
+        new LeafletClusterIcon(
+            "orangePurpleCircle.png",
+            20
+        ),
+
+        new LeafletClusterIcon(
+            "redPurpleCircle.png",
+            20
+        ),
+
+        new LeafletClusterIcon(
+            "purpleGreenOrangeCircle.png",
+            20
+        ),
+
+        new LeafletClusterIcon(
+            "purpleRedGreenCircle.png",
+            20
+        ),
         
+        new LeafletClusterIcon(
+            "redOrangePurpleCircle.png",
+            20
+        ),
+        
+        new LeafletClusterIcon(
+            "purpleGreenOrangeRedCircle.png",
+            20
+        ),
+        
+        new LeafletClusterIcon(
+            "purpleCheckmark.png",
+            20
+        ),
+
+        new LeafletClusterIcon(
+            "purpleCircle.png",
+            20
+        ),
         
         new EmbeddedIcon(
             "editLinkPencil.svg",

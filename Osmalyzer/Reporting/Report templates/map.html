@@ -18,18 +18,28 @@
                 var red = false;
                 var green = false;
                 var orange = false;
+                var purple = false;
                 cluster.getAllChildMarkers().forEach(function (marker) {
                     if (marker.group == 'green') green = true;
                     if (marker.group == 'red') red = true;
                     if (marker.group == 'orange') orange = true;
+                    if (marker.group == 'purple') purple = true;
                 });
+                if (red && orange && green && purple) icon = 'purpleGreenOrangeRedCircle';
                 if (red && orange && green) icon = 'redOrangeGreenCircle';
+                if (purple && orange && green) icon = 'purpleGreenOrangeCircle';
+                if (red && purple && green) icon = 'purpleRedGreenCircle';
+                if (red && orange && purple) icon = 'redOrangePurpleCircle';
+                else if (red && purple) icon = 'redPurpleCircle';
+                else if (purple && orange) icon = 'orangePurpleCircle';
+                else if (purple && green) icon = 'greenPurpleCircle';
                 else if (red && orange) icon = 'redOrangeCircle';
                 else if (orange && green) icon = 'orangeGreenCircle';
                 else if (red && green) icon = 'redGreenCircle';
                 else if (orange) icon = 'orangeCircle';
                 else if (red) icon = 'redCircle';
                 else if (green) icon = 'greenCircle';
+                else if (purple) icon = 'purpleCircle';
                 return L.divIcon({ html: '<img src=\'icons/'+icon+'.png\' class=\'clusterIcon\'><span class=\'clusterText\'>' + cluster.getChildCount() + '</span>', className: 'cluster', iconSize: L.point(20, 20) });
             }
         });
